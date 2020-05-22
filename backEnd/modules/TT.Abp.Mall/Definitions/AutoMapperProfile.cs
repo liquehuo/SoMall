@@ -24,8 +24,8 @@ namespace TT.Abp.Mall.Definitions
 {
     public class MallApplicationAutoMapperProfile : Profile
     {
-        public MallApplicationAutoMapperProfile()
-        {
+            public MallApplicationAutoMapperProfile()
+            {
             CreateMap<MallUser, MallUserDto>();
 
             #region Shops
@@ -123,6 +123,8 @@ namespace TT.Abp.Mall.Definitions
             CreateMap<Swiper, SwiperDto>();
             CreateMap<Swiper, SwiperCreateOrUpdateDto>()
                 .ReverseMap();
+
+            CreateMap<RefundLog, RefundLogDto>();
         }
     }
 }

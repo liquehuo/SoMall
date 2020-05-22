@@ -14,6 +14,7 @@ export const menu = [
     { text: '商家管理', heading: true },
     { text: "商家列表", link: "/shop-management", icon: "fa fa-store" },
     { text: "CMS", link: "/cms", icon: "fa fa-store" },
+    { text: "audit", link: "/audit", icon: "fa fa-store" },
 
     { text: '商城系统', heading: true },
     { text: "商铺", link: "/mall/shops", icon: "fa fa-store" },
@@ -21,6 +22,7 @@ export const menu = [
     { text: "商品列表", link: "/mall/spus", icon: "far fa-lightbulb" },
     { text: "订单列表", link: "/mall/orders", icon: "fas fa-donate" },
     { text: "支付请求列表", link: "/mall/payOrders", icon: "fas fa-donate" },
+    { text: "退款列表", link: "/mall/refundLogs", icon: "fas fa-donate" },
     { text: "合伙人列表", link: "/mall/partners", icon: "far fa-user" },
     { text: "地址列表", link: "/mall/addresses", icon: "far fa-address-book" },
     { text: "商城用户", link: "/mall/users", icon: "far fa-user" },
@@ -34,7 +36,6 @@ export const menu = [
     { text: '帐号管理', heading: true },
     { text: "微信用户管理", link: "/account-management/wechatUserInfos", icon: 'fa fa-address-book' },
     { text: "实名认证", link: "/account-management/realNameInfos", icon: "far fa-address-book" },
-
 
     { text: '访客管理', heading: true },
     {

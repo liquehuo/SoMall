@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <RootNamespace />
+        <AssemblyName>TT.Abp.AuditManagement</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="TT\Abp\AuditManagement\Events" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.4" />
+        <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="2.8.0" />
+        <PackageReference Include="Volo.Abp.AutoMapper" Version="2.8.0" />
+        <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="2.8.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TT.Core\TT.Core.csproj" />
+    </ItemGroup>
+</Project>

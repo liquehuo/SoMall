@@ -67,7 +67,7 @@ export class OrderListComponent implements OnInit {
     this.api.refund({
       body: {
         orderId: item.id,
-        refundPrice: item.pricePaidIn,
+        refundPrice: 0.01,
         reason: this.authQuery.user.name + " 操作退款"
       }
     }).subscribe(res => {

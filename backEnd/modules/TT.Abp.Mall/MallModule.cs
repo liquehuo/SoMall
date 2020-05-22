@@ -2,7 +2,7 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using TT.Abp.AppManagement;
-using TT.Abp.Mall.Application.Clients;
+using TT.Abp.AuditManagement;
 using TT.Abp.Mall.Definitions;
 using TT.Abp.Mall.EntityFrameworkCore;
 using TT.Abp.Mall.Localization;
@@ -14,7 +14,6 @@ using Volo.Abp.Http.Client;
 using Volo.Abp.Localization;
 using Volo.Abp.Localization.ExceptionHandling;
 using Volo.Abp.Modularity;
-using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
 
 namespace TT.Abp.Mall
@@ -25,6 +24,7 @@ namespace TT.Abp.Mall
         typeof(AbpAutoMapperModule),
         typeof(AbpHttpClientModule),
         typeof(AppManagementModule),
+        typeof(AuditManagementModule),
         typeof(WeixinModule)
     )]
     public class MallModule : AbpModule
@@ -37,7 +37,8 @@ namespace TT.Abp.Mall
 
             Configure<AbpAutoMapperOptions>(options => { options.AddProfile<MallApplicationAutoMapperProfile>(validate: false); });
 
-            Configure<AbpAspNetCoreMvcOptions>(options => {
+            Configure<AbpAspNetCoreMvcOptions>(options =>
+            {
                 options.MinifyGeneratedScript = true;
                 options.ConventionalControllers.Create(typeof(MallModule).Assembly, opts => { opts.RootPath = "mall"; });
             });
@@ -64,7 +65,6 @@ namespace TT.Abp.Mall
 
             // JUST PUT THIS LINE TO USE MediatR Modules
             context.Services.AddMediatR(typeof(MallModule).GetTypeInfo().Assembly);
-            
         }
     }
 }
