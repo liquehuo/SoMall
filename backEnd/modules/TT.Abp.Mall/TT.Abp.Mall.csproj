@@ -11,21 +11,21 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="2.8.0" />
-      <PackageReference Include="Volo.Abp.AutoMapper" Version="2.8.0" />
-      <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="2.8.0" />
-      <PackageReference Include="Volo.Abp.Http.Client" Version="2.8.0" />
-      <PackageReference Include="Volo.Abp.Users.EntityFrameworkCore" Version="2.8.0" />
+      <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="2.9.0" />
+      <PackageReference Include="Volo.Abp.AutoMapper" Version="2.9.0" />
+      <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="2.9.0" />
+      <PackageReference Include="Volo.Abp.Http.Client" Version="2.9.0" />
+      <PackageReference Include="Volo.Abp.Users.EntityFrameworkCore" Version="2.9.0" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\TT.RabbitMq\TT.RabbitMq.csproj" />
+      <ProjectReference Include="..\..\modules\TT.RabbitMq\TT.RabbitMq.csproj" />
       <ProjectReference Include="..\TT.Abp.AppManagement\TT.Abp.AppManagement.csproj" />
       <ProjectReference Include="..\TT.Abp.Audit\TT.Abp.AuditManagement.csproj" />
       <ProjectReference Include="..\TT.Abp.Core\TT.Abp.Core.csproj" />
       <ProjectReference Include="..\TT.Abp.Shops\TT.Abp.Shops.csproj" />
       <ProjectReference Include="..\TT.Abp.Weixin\TT.Abp.Weixin.csproj" />
-      <ProjectReference Include="..\TT.Core\TT.Core.csproj" />
+      <ProjectReference Include="..\TT.Extensions\TT.Extensions.csproj" />
     </ItemGroup>
 
     <ItemGroup>

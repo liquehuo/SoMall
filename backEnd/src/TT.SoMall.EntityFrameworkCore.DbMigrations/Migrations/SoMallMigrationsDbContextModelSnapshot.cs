@@ -15,7 +15,7 @@ namespace TT.SoMall.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.3")
+                .HasAnnotation("ProductVersion", "3.1.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -221,6 +221,9 @@ namespace TT.SoMall.Migrations
                     b.Property<Guid?>("LastModifierId")
                         .HasColumnName("LastModifierId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("NodesMaxIndex")
+                        .HasColumnType("int");
 
                     b.Property<string>("ProviderKey")
                         .HasColumnType("nvarchar(max)");
@@ -1182,6 +1185,15 @@ namespace TT.SoMall.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("Audit")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("AuditFlowId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("AuditStatus")
+                        .HasColumnType("int");
 
                     b.Property<string>("BillNo")
                         .IsRequired()
